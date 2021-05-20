@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+header {
+    background-color: #361b28;
+    color: #ffffff;
+    font-family: "Dancing Script";
+}
+h1 {
+    text-align: center;
+    padding-top: 2em;
+}
+h2, h3 {
+    font-family: "Dancing Script";
+}
+p {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
+}
+.input-group {
+    width: 70%;
+    margin: 0.3em auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+label {
+    margin: .5em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+.form-control {
+    border-radius: 25px;
+}
+.btn.btn-outline-secondary {
+    color: #361b28;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+main {
+    display: inline;
+    margin: 1em;
+    padding-top: 0;
+}
+span {
+    margin-left: 16px;
+}
+.flexcCajitas {
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: auto;
+}
+.card {
+    width: 300px;
+    position: relative;
+    margin: 4em auto;
+}
+#presionAtmosferica, #humedad, #velViento {
+    padding-right: 8px;
+}
+iframe {
+    margin-top: 1em;
+    padding: 0;
+    border-radius: 40px;
+}
+footer {
+    background-color: #361b28;
+    color: #ffffff;
+    font-family: "Dancing Script";
+    text-align: center;
+}
+footer div {
+    width: 80%;
+    margin: auto auto;
+}
+.datos ul li {
+    color: white;
+    font-size: 1.2em;
+    list-style: none;
+}
+.datos {
+    margin: auto auto;
+    padding: 1em;
+    text-align: center;
+}
+/*  */

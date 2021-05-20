@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="En Andy´s Weather App te facilitamos la busqueda de los datos del clima">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Andrea Sanchez Liporace, comisión dwn3a, turno noche, año 2021</title>
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <!-- FUENTE ICONO REDES -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <!-- PRESENTACION DE LA APP -->
+        <h1>Andy´s Weather App</h1>
+        <p>Ingresá tu ciudad para consultar el clima en tiempo real</p>
+        <form class="input-group mb-3">
+            <!-- IMPUT PARA QUE EL USUARIO INGRESE LA CIUDAD DE SU CONSULTA CONN EL VALUE VACIO Y EL ATRIBUTO REQUERIDO-->
+            <label for="busquedaUsuario">Ciudad: </label>
+            <input type="text" id="busquedaUsuario" class="form-control" value="" required/>
+            <div class="input-group-append">
+                <!-- BOTON QUE DISPARA LA BUSQUEDA Y CONSUMO DE LAS DIFERENTES APIS QUE UTILIZA EL PROGRAMA -->
+                <button id="botonBusqueda" class="btn btn-outline-secondary" type="button">Consultar clima</button>
+            </div>
+        </form>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <!-- H2 QUE SE UTILIZA PARA DEVOLVER LA CIUDAD BUSCADA POR EL USUARIO -->
+            <h2 id="ciudadBuscada"></h2>
+            <!-- DIV PARA PRESENTAR LA CONDICION DEL CLIMA, ICONO DE LA CONDICION Y TEMPERATURA EN TIEMPO REAL -->
+            <div class="row justify-content-sm-center">
+                <!-- CONDICION DEL CLIMA -->
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h3>Condición del clima: <span id="condicionClima"></span></h3>
+                </div>
+                <!-- ICONO DE LA CONDICION -->
+                <div class="col-12 col-sm-6 col-md-4">
+                    <img id="iconoClima" alt="Icono que representa la condicion del clima en tiempo real">
+                </div>
+                <!-- TEMPERATURA EN TIEMPO REAL -->
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h3>Temperatura: <span id="temperaturaTiempoReal"></span></h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DIV QUE SE UTILIZA PARA DEVOLVER LOS DATOS DE TEMP.MAX, TEMP.MIN, HUMEDAD, SENSACION TERMICA, PRESION ATMOSFERICA Y VELOCIDAD DEL VIENTO -->
+        <div class="flexcCajitas">
+            <!-- TEMP.MAX -->
+            <div class="card border-danger mb-3 flex-item" style="max-width: 18rem;">
+                <div class="card-header">TEMPERATURA MÁXIMA</div>
+                <div class="card-body text-danger">
+                    <p class="card-text" id="tempMax"></p>
+                </div>
+            </div>
+            <!-- TEMP.MIN -->
+            <div class="card border-primary mb-3 flex-item" style="max-width: 18rem;">
+                <div class="card-header">TEMPERATURA MÍNIMA</div>
+                <div class="card-body text-primary">
+                    <p class="card-text" id="tempMin"></p>
+                </div>
+            </div>
+            <!-- SENSACION TERMICA -->
+            <div class="card border-secondary mb-3 flex-item" style="max-width: 18rem;">
+                <div class="card-header">SENSACIÓN TÉRMICA</div>
+                <div class="card-body text-secondary">
+                    <p class="card-text" id="sensacionTermica"></p>
+                </div>
+            </div>
+            <!-- PRESIÓN ATMOSFÉRICA -->
+            <div class="card border-warning mb-3 flex-item" style="max-width: 18rem;">
+                <div class="card-header">PRESIÓN ATMOSFÉRICA</div>
+                <div class="card-body text-warning">
+                    <p class="card-text" id="presionAtmosferica"></p>
+                </div>
+            </div>
+            <!-- HUMEDAD -->
+            <div class="card border-success mb-3 flex-item" style="max-width: 18rem;">
+                <div class="card-header">HUMEDAD</div>
+                <div class="card-body text-success">
+                    <p class="card-text" id="humedad"></p>
+                </div>
+            </div>
+            <!-- VELOCIDAD DEL VIENTO -->
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">VELOCIDAD DEL VIENTO</div>
+                <div class="card-body text-info">
+                    <p class="card-text" id="velViento"></p>
+                </div>
+            </div>
+        </div>
+        <iframe
+                class="text-center my-5 container-fluid"
+                id="map"
+                width= "100%"
+                height= "400px"
+                frameborder="0" style="border:0"
+                src="" allowfullscreen>
+        </iframe>
+    </main>
+    <script type="text/javascript" src="js/weather.js"></script>
+    <footer>
+        <div class="datos">
+            <ul>
+                <li> Sitio diseñado por Andrea Sanchez Liporace </li>
+                <li> Primer parcial - Aplicaciones web progresivas </li>
+                <li> Comisión: dwn3a </li>
+                <li> Escuela Da Vinci - 2021 </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+</html>
