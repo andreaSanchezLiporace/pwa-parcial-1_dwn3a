@@ -1,2 +1,2 @@
-# andrea-sanchez-liporace_parcial-1_dwn3a
- Primer parcial de APW - Cuatrimestre 1, año 2021
+# pwa-parcial-1_dwn3a
+ TP1 - PWA - App clima
